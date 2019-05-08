@@ -6,7 +6,7 @@ def main():
     found = False
     tab_count = commands.getoutput(
         "osascript -e 'tell application \"Google Chrome\" to count every tab of front window'")
-    for i in range(1, int(tab_count)):
+    for i in range(1, int(tab_count)+1):
         current_tab = commands.getoutput(
             "osascript -e 'tell application \"Google Chrome\" to get URL of tab " + str(i) + " of front window'")
         if "www.youtube.com/watch?v" in current_tab:
